@@ -248,6 +248,15 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    transition: 0.5s;
+}
+.layer a:hover{
+    color: rgb(31, 31, 31);
+    background: #d8d8d8;
+}
+.layer a:active{
+    color: #ff5602;
+    background: #fff;
 }
 
 .btn{
@@ -264,6 +273,10 @@ nav ul li a:hover::after{
 .btn:hover{
     background:#ffb302 ;
     color: #262626;
+}
+.btn:active{
+    transition: 0s;
+    background: #dd8400;
 }
 
 /* -----------contact---------- */
@@ -295,6 +308,7 @@ nav ul li a:hover::after{
 .social-icons a :hover{
     color: #ff8102;
     transform: translateY(-5px);
+    transition: 0.5s;
 }
 .btn.btn2{
     display:inline-block ;
@@ -313,6 +327,11 @@ form input, form textarea{
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
+}
+form input:hover, form textarea:hover{
+    transition: 0.6s;
+    background: #ababab;
+    color: black;
 }
 form btn2{
     padding: 14px 60px;
