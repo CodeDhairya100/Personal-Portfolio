@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FrontEnd Web-Dev — A Crafted Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#f59e0b;
+      --glass:rgba(255,255,255,0.03);
+    }
+    *{
+      box-sizing:border-box;
+      font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071026 0%, #07182a 60%);
+      color:#e6eef6;
+      line-height:1.45
+    }
+    .wrap{
+      max-width:1100px;
+      margin:48px auto;
+      padding:28px
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:18px
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#ef4444);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6)
+    }
+    h1{
+      margin:0;
+      font-size:28px
+    }
+    p.lead{
+      color:var(--muted);
+      margin:6px 0 18px
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:24px;
+      margin-top:18px
+    }
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:22px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.7);
+      border:1px solid rgba(255,255,255,0.03)
+    }
+    .hero .card{
+      min-height:220px
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--glass);
+      color:var(--accent);
+      font-weight:600;
+      font-size:13px
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:18px
+    }
+    section h2{
+      margin:0 0 10px;
+      font-size:18px
+    }
+    ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted)
+    }
+    .cta{
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg,var(--accent),#fb923c);
+      color:#071026;
+      text-decoration:none;
+      font-weight:700
+    }
+    .tools{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px
+    }
+    .chip{
+      background:var(--glass);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-weight:600
+    }
+    footer{
+      margin-top:28px;
+      color:var(--muted);
+      font-size:13px
+    }
+    .footer-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap
+    }
+    .footer-links{
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+    .footer-links a{
+      color:var(--muted);
+      text-decoration:none
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">FE</div>
+      <div>
+        <h1>FrontEnd Web-Dev</h1>
+        <p class="lead">Where code becomes canvas — building beautiful, usable interfaces that speak to people.</p>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <div class="badge">Overview</div>
+        <h2 style="margin-top:12px">What FrontEnd is</h2>
+        <p style="color:var(--muted)">FrontEnd development is the craft of creating the parts of a website or app that users see and interact with. It blends visual design, interaction logic, and performance engineering to turn ideas into living pages.</p>
+
+        <div style="margin-top:16px">
+          <h2>Core pillars</h2>
+          <ul>
+            <li>Structure — HTML: semantic, accessible markup.</li>
+            <li>Presentation — CSS: layout, responsive design, animations.</li>
+            <li>Behavior — JavaScript: interactivity, state, client logic.</li>
+          </ul>
+        </div>
+
+        <a class="cta" href="#learn">Dive deeper</a>
+      </div>
+
+      <aside class="card">
+        <h2>Quick toolkit</h2>
+        <div class="tools" style="margin-top:12px">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Accessibility</span>
+          <span class="chip">Responsive</span>
+          <span class="chip">Performance</span>
+          <span class="chip">DevTools</span>
+        </div>
+
+        <h2 style="margin-top:16px">Recommended workflow</h2>
+        <ul>
+          <li>Design a simple, semantic structure.</li>
+          <li>Style mobile-first; layer complexity gradually.</li>
+          <li>Progressively enhance behaviour with JS.</li>
+          <li>Test for accessibility and performance often.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div id="learn" class="grid">
+      <section class="card">
+        <h2>Best practices</h2>
+        <ul>
+          <li>Write semantic HTML for clarity and accessibility.</li>
+          <li>Keep CSS modular and predictable; prefer utility patterns where helpful.</li>
+          <li>Optimize assets — compress images, defer non-critical scripts.</li>
+          <li>Make interactions feel natural: animation should inform, not distract.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Learning path (concise)</h2>
+        <ul>
+          <li>Basics: HTML structure, forms, semantic elements.</li>
+          <li>Styling: Flexbox, Grid, responsive breakpoints.</li>
+          <li>JS: DOM, events, fetch, ES6+ features.</li>
+          <li>Frameworks & tools: one library (React/Vue), bundler, Git.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Common tools</h2>
+        <div class="tools" style="margin-top:10px">
+          <span class="chip">VS Code</span>
+          <span class="chip">Chrome DevTools</span>
+          <span class="chip">Git</span>
+          <span class="chip">NPM/Yarn</span>
+          <span class="chip">Build tools</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Why it matters</h2>
+        <p style="color:var(--muted)">A thoughtful front end shapes first impressions, eases tasks, and invites trust. It is the bridge between intent and experience — traditional craft with modern tools.</p>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-wrap">
+        <div>&copy; 2025 FrontEnd | Designed by Dhairya ❤️ for innovation</div>
+        <div class="footer-links">
+          <a href="../portfolio.html">← Back</a>
+          <small>© FrontEnd Guide</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id=a.getAttribute('href');
+        if(id==='index.html' || id==='') { window.location = id; return; }
+        const el=document.querySelector(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
